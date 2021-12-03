@@ -7,9 +7,7 @@ library(dplyr)
 library(readxl)
 library(readr)
 
-readxl_example()
-
-run_results_12 <- read_excel("/emomap2/run_results-12.xlsx")
+run_results_12 <- read_excel("run_results-12.xlsx")
 sources <- distinct(run_results_12, Location)
 sources_df <- as.data.frame(sources)
 locations_df <- mutate_geocode(sources_df, Location)
